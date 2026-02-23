@@ -12,7 +12,7 @@ interface GalleryImage {
 
 const column1: GalleryImage[] = [
   { src: "/images/gallery-1.jpg", alt: "Watercolor portrait art" },
-  { src: "/images/gallery-4.jpg", alt: "Abstract black and white art" },
+  { src: "/images/gallery-4.png", alt: "Abstract black and white art" },
   { src: "/images/gallery-7.jpg", alt: "Pink microscopic art" },
 ];
 
@@ -25,7 +25,7 @@ const column2: GalleryImage[] = [
 const column3: GalleryImage[] = [
   { src: "/images/gallery-3.jpg", alt: "Colorful abstract painting" },
   { src: "/images/gallery-6.jpg", alt: "Girl in yellow dress painting" },
-  { src: "/images/gallery-9.jpg", alt: "Purple marble abstract" },
+  { src: "/images/gallery-9.png", alt: "Purple marble abstract" },
 ];
 
 const GAP = 12;
@@ -51,7 +51,7 @@ function InfiniteColumn({
         for (let i = 0; i < count; i++) {
           total += (children[i] as HTMLElement).getBoundingClientRect().height;
         }
-        total += (count) * GAP;
+        total += count * GAP;
         setSetHeight(total);
       }
     }
@@ -97,11 +97,7 @@ function InfiniteColumn({
       >
         {duplicated.map((image, i) => (
           <div className={styles.imageWrapper} key={`${image.src}-${i}`}>
-            <img
-              src={image.src}
-              alt={image.alt}
-              className={styles.image}
-            />
+            <img src={image.src} alt={image.alt} className={styles.image} />
           </div>
         ))}
       </motion.div>

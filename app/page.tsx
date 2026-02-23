@@ -5,8 +5,10 @@ import styles from "./page.module.scss";
 export default function LoginPage() {
   return (
     <main className={styles.container}>
-      <ImageGallery />
-      <LoginForm />
+      <div className={styles.mainContainer}>
+        <ImageGallery />
+        <LoginForm />
+      </div>
     </main>
   );
 }

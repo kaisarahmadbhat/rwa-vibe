@@ -1,9 +1,8 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .gallery {
   display: none;
   width: 50%;
-  padding: $space-6;
   overflow: hidden;
   position: relative;
 
@@ -14,7 +13,7 @@
 
 .masonryGrid {
   display: flex;
-  gap: $space-3;
+  gap: $space-4;
   height: 100vh;
   overflow: hidden;
 }
@@ -47,9 +46,12 @@
 .image {
   width: 100%;
   height: auto;
+  min-height: 360px;
   display: block;
   border-radius: $radius-lg;
-  transition: filter $transition-smooth, transform $transition-smooth;
+  transition:
+    filter $transition-smooth,
+    transform $transition-smooth;
 }
 
 .pagination {

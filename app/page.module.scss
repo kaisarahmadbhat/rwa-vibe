@@ -1,20 +1,36 @@
-@use './styles/variables' as *;
+@use "./styles/variables" as *;
 
 .container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   background: $color-bg;
   position: relative;
   overflow: hidden;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse at 80% 20%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
-      radial-gradient(ellipse at 20% 80%, rgba(37, 99, 235, 0.03) 0%, transparent 50%);
+      radial-gradient(
+        ellipse at 80% 20%,
+        rgba(37, 99, 235, 0.06) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 20% 80%,
+        rgba(37, 99, 235, 0.03) 0%,
+        transparent 50%
+      );
     pointer-events: none;
     z-index: 0;
+  }
+
+  .mainContainer {
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
   }
 }
