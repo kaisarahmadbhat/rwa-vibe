@@ -1,0 +1,240 @@
+@use '../../styles/variables' as *;
+
+.loginSection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-6;
+  position: relative;
+
+  @media (min-width: $bp-lg) {
+    width: 50%;
+  }
+}
+
+.decorativeStar {
+  position: absolute;
+  bottom: $space-8;
+  right: $space-8;
+  width: 120px;
+  height: 120px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.content {
+  width: 100%;
+  max-width: 440px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  margin-bottom: $space-10;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  color: $color-primary;
+}
+
+.logoText {
+  font-size: $font-xl;
+  font-weight: $font-bold;
+  color: $color-text;
+  letter-spacing: -0.02em;
+}
+
+.card {
+  background: $color-card-bg;
+  border: 1px solid $color-card-border;
+  border-radius: $radius-xl;
+  padding: $space-10;
+  box-shadow: $shadow-card;
+  backdrop-filter: blur(20px);
+}
+
+.title {
+  font-size: $font-2xl;
+  font-weight: $font-semibold;
+  color: $color-text;
+  text-align: center;
+  margin-bottom: $space-2;
+}
+
+.subtitle {
+  font-size: $font-sm;
+  color: $color-text-secondary;
+  text-align: center;
+  margin-bottom: $space-8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.label {
+  font-size: $font-sm;
+  font-weight: $font-medium;
+  color: $color-text;
+
+  .required {
+    color: #ef4444;
+    margin-left: $space-1;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: $space-3 $space-4;
+  background: $color-input-bg;
+  border: 1px solid $color-input-border;
+  border-radius: $radius-md;
+  color: $color-text;
+  font-size: $font-sm;
+  transition: border-color $transition-base, box-shadow $transition-base;
+  outline: none;
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+
+  &:focus {
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px $color-input-focus;
+  }
+}
+
+.togglePassword {
+  position: absolute;
+  right: $space-3;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $color-text-muted;
+  padding: $space-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-text-secondary;
+  }
+}
+
+.forgotRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -$space-2;
+}
+
+.forgotLink {
+  font-size: $font-sm;
+  color: $color-link;
+  transition: color $transition-base;
+
+  &:hover {
+    color: lighten($color-link, 10%);
+    text-decoration: underline;
+  }
+}
+
+.submitBtn {
+  width: 100%;
+  padding: $space-3 $space-6;
+  background: $color-primary;
+  color: $color-text;
+  font-size: $font-base;
+  font-weight: $font-semibold;
+  border-radius: $radius-md;
+  border: none;
+  transition: background $transition-base;
+  margin-top: $space-2;
+
+  &:hover {
+    background: $color-primary-hover;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  margin: $space-6 0;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: $color-divider;
+  }
+}
+
+.dividerText {
+  font-size: $font-sm;
+  color: $color-text-muted;
+}
+
+.socialRow {
+  display: flex;
+  gap: $space-3;
+}
+
+.signupRow {
+  text-align: center;
+  margin-top: $space-6;
+  font-size: $font-sm;
+  color: $color-text-secondary;
+}
+
+.signupLink {
+  color: $color-link;
+  font-weight: $font-medium;
+  margin-left: $space-1;
+  transition: color $transition-base;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  margin-top: $space-8;
+  flex-wrap: wrap;
+}
+
+.footerLink {
+  font-size: $font-xs;
+  color: $color-text-muted;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-text-secondary;
+  }
+}
+
+.footerDot {
+  font-size: $font-xs;
+  color: $color-text-muted;
+}
