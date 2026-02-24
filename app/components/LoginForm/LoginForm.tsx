@@ -101,7 +101,7 @@ function DecorativeStar() {
       <path
         d="M100 0C155.228 0 200 44.7715 200 100C200 155.228 155.228 200 100 200C44.7715 200 0 155.228 0 100C0 44.7715 44.7715 0 100 0C100 75 33.3333 100 0 100C75 100 100 166.667 100 200C100 125 166.667 100 200 100C125 100 100 33.3333 100 0Z"
         fill="#AFAFAF"
-        fill-opacity="0.08"
+        fillOpacity="0.08"
       />
     </svg>
   );
@@ -177,12 +177,12 @@ export default function LoginForm() {
                   {showPassword ? <Eye size={18} /> : <EyeOff size={18} />}
                 </button>
               </div>
-            </div>
 
-            <div className={styles.forgotRow}>
-              <a href="#" className={styles.forgotLink}>
-                Forgot Password?
-              </a>
+              <div className={styles.forgotRow}>
+                <a href="#" className={styles.forgotLink}>
+                  Forgot Password?
+                </a>
+              </div>
             </div>
 
             <motion.button

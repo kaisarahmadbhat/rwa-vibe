@@ -28,7 +28,7 @@ const column3: GalleryImage[] = [
   { src: "/images/gallery-9.png", alt: "Purple marble abstract" },
 ];
 
-const GAP = 12;
+const GAP = 16;
 
 function InfiniteColumn({
   images,
@@ -115,18 +115,6 @@ export default function ImageGallery() {
         <InfiniteColumn images={column1} direction="up" duration={25} />
         <InfiniteColumn images={column2} direction="down" duration={28} />
         <InfiniteColumn images={column3} direction="up" duration={26} />
-      </div>
-
-      <div className={styles.pagination}>
-        <button className={styles.paginationBtn} aria-label="Previous page">
-          <ChevronLeft size={16} />
-        </button>
-        <span className={styles.paginationInfo}>
-          {currentPage} / {totalPages}
-        </span>
-        <button className={styles.paginationBtn} aria-label="Next page">
-          <ChevronRight size={16} />
-        </button>
       </div>
     </div>
   );

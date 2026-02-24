@@ -1,18 +1,20 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .socialButton {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: $space-2;
-  padding: $space-3 $space-5;
-  border-radius: $radius-lg;
+  padding: 10px $space-10;
+  border-radius: $radius-md;
   background: $color-social-bg;
   border: 1px solid $color-social-border;
   color: $color-text;
   font-size: $font-sm;
   font-weight: $font-medium;
-  transition: background $transition-base, border-color $transition-base;
+  transition:
+    background $transition-base,
+    border-color $transition-base;
   flex: 1;
 
   &:hover {
